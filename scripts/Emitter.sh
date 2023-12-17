@@ -1,0 +1,18 @@
+python src/main.py \
+    --output_dir experiments \
+    --comment "classification from Scratch" \
+    --name Emitter \
+    --records_file Classification_records.xls \
+    --data_dir ./data/Emitter \
+    --data_class adsb \
+    --pattern TRAIN \
+    --val_pattern TEST \
+    --epochs 50 \
+    --lr 0.001 \
+    --patch_size 8 \
+    --stride 8 \
+    --optimizer RAdam \
+    --d_model 768 \
+    --pos_encoding learnable \
+    --task classification \
+    --key_metric accuracy
